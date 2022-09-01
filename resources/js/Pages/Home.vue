@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <h1 class="text-center text-5xl">Hello Restaurant Website Cook</h1>
+        <h1 class="text-center text-5xl">Hello Restaurant Website Cook </h1>
     </div>
 
 </template>
