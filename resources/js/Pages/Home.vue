@@ -5,47 +5,9 @@
 
        <div class="bg-red-100 px-6 py-4">
 
-            <!-- NAV -->
-            <nav>
+            <!-- HOME NAV DISPLAY -->
+            <Subnav />
 
-                <!-- NAV DIV -->
-                <div class="flex px-6 ">
-
-
-                    <div  class="flex space-x-6 justify-center items-center mx-auto">
-
-                         <!-- LOGO -->
-                        <div class="py-3 px-2 mr-36">
-                            <Link href="/">
-                                <img src="/images/hungry_logo.png" class="w-24" alt="logo">
-                            </Link>
-                        </div>
-
-                        <div class="py-3 px-3">
-                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">Home</Link>
-                        </div>
-
-                        <div class="py-3 px-3">
-                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">Menu</Link>
-                        </div>
-
-                        <div class="py-3 px-3">
-                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">About</Link>
-                        </div>
-
-                        <div class="py-3 px-3">
-                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">Contact us</Link>
-                        </div>
-
-                        <div class="py-3 px-28">
-                            <button class="py-3 px-4 bg-red-700 hover:text-red-700 hover:bg-white font-sans hover:border-2 hover:border-red-600 text-white rounded-lg">Book Table</button>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </nav>
             <div class="flex space-x-12 justify-center items-center px-12 py-6">
                 <div class="space-y-6">
                     <h4 id="cover-h4" class="text-4xl text-red-700 font-medium">Expensive But The Best</h4>
@@ -72,10 +34,16 @@
  // IMPORT SHARED LAYOUT
 import Layout from '../Shared/Layout.vue';
 
+//IMPORT SHARED FEATURE PRODUCT
+import Subnav from '../Shared/Subnav.vue';
+
 export default {
     name: 'Home',
     layout: Layout,
 
+    components: {
+        Subnav
+    },
 
 }
 </script>
