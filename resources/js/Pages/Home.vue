@@ -53,8 +53,13 @@
                     </button>
                 </div>
             </div>
-
        </div>
+
+        
+        <!-- THIRD HOME SECTION -->
+        <div>
+            <Submenu />
+        </div>
     </div>
 
 </template>
@@ -67,12 +72,16 @@ import Layout from '../Shared/Layout.vue';
 //IMPORT SHARED DISPLAY NAV
 import Subnav from '../Shared/Subnav.vue';
 
+//IMPORT SHARED DISPLAY NAV
+import Submenu from '../Shared/Submenu.vue';
+
 export default {
     name: 'Home',
     layout: Layout,
 
     components: {
-        Subnav
+        Subnav,
+        Submenu
     },
 
 }
