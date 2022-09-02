@@ -8,7 +8,7 @@
             <!-- HOME NAV DISPLAY -->
             <Subnav />
 
-            <div class="flex flex-col-reverse px-2 mt-2 lg:mt-0 lg:flex lg:flex-row lg:space-x-12 lg:justify-center lg:items-center lg:px-12 lg:py-6">
+            <div class="flex flex-col-reverse px-2 mt-2 lg:mt-0 md:flex md:flex-row lg:space-x-12 lg:justify-center lg:items-center lg:px-12 lg:py-6">
 
                 <div class="space-y-6 mt-4">
 
@@ -30,8 +30,30 @@
        </div>
 
         <!-- SECOND HOME SECTION -->
-       <div>
-            <h1 class="mt-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus suscipit, saepe odio nesciunt at ratione! Explicabo at inventore minus dolor eligendi ipsa maiores nemo. Amet porro assumenda suscipit saepe temporibus!</h1>
+        <div class="mt-12">
+
+            <div class="flex flex-col-reverse px-2 mt-2 lg:mt-0 md:flex md:flex-row md:space-x-4 lg:space-x-12 lg:justify-center lg:items-center lg:px-12 lg:py-6">
+
+                <div class="w-full mt-6 md:mt-0">
+                    <img src="images/download.jpg" alt="" class="w-full rounded-3xl object-cover">
+                </div>
+
+                <div class="w-full space-y-6">
+
+                    <h2 id="cover-h4" class="text-3xl lg:text-5xl text-red-700 font-medium">Discover</h2>
+
+                    <h1 class="text-3xl lg:text-6xl font-sans font-medium">OUR STORY</h1>
+
+                    <p class="font-serif font-medium text-sm lg:text-lg">
+                        Multiply isn't night sixth under second second open he darkness said beast, without whales every herb sea place light life from divide isn't. Deep give greater. Darkness have fifth third open over itself. Third great make form is waters were. Midst green very.
+                    </p>
+
+                    <button class="py-3 px-4 bg-red-700 font-semibold hover:text-red-700 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded-lg">
+                        Read Full Story
+                    </button>
+                </div>
+            </div>
+
        </div>
     </div>
 

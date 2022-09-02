@@ -50,7 +50,7 @@
                 <div class="lg:hidden" v-if="Open">
 
 
-                    <div class="absolute z-[100] flex-col bg-white w-96 px-4  h-72 overscroll-y-contain  py-8 mt-16 space-y-4 font-bold left-0 right-0">
+                    <div class="absolute z-[100] flex-col bg-white px-4  h-72 overscroll-y-contain  py-8 mt-16 space-y-4 font-bold left-0 right-0">
 
                         <div @click="Open = !Open" class="font-bold py-4 px-3 ">
                             <Link href="/"  class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Home</Link>
