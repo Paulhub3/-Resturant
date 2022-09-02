@@ -1,45 +1,202 @@
 <template>
 
     <!-- THIRD HOME SECTION -->
-    <div>
+    <div class="mt-16 bg-gray-100 py-6 px-4">
 
-        <div class="flex space-x-6 justify-center items-center">
-            <div class="mr-56">
-                <h2>Delicious Food Menu</h2>
-            </div>
+        <h1 class="text-3xl text-red-700 text-center mb-12 font-sans font-medium">OUR MENU</h1>
 
-            <div class="container mx-auto">
-                <ul class="flex justify-center space-x-2 text-white ">
-                    <li>
-                        <button @click="currentTab(1)" class="inline-block px-4 py-2 bg-blue-500 focus:outline-none">
-                            Tab 1
-                         </button>
-                    </li>
-                    <li>
-                        <button @click="currentTab(2)" class="inline-block px-4 py-2 bg-blue-500 focus:outline-none">
-                        Tab 2
-                        </button>
-                    </li>
-                    <li>
-                        <button @click="currentTab(3)" class="inline-block px-4 py-2 bg-blue-500 focus:outline-none">
-                            Tab 3
-                        </button>
-                    </li>
-                </ul>
-                <div class="p-3 mt-6 text-center bg-white">
-                    <div v-if="tab === 1">
-                        Tab one
+        <div class="container flex flex-col  mx-auto">
+            <div class="flex space-x-12 justify-center">
+                <div class="">
+                    <h2 class="text-3xl mr-36 font-sans font-medium">Delicious Food Menu</h2>
+                </div>
+
+                <div class="flex space-x-6">
+                    <div @click="currentTab(1)" class="cursor-pointer">
+                        <a class="text-xl font-normal hover-text-400 text-gray-700 font-sans">Breakfast</a>
                     </div>
-                    <div v-if="tab === 2">
-                        Tab two
+
+                    <div @click="currentTab(2)" class="cursor-pointer">
+                       <a class="text-xl font-normal hover-text-400 text-gray-700 font-sans">Launch</a>
                     </div>
-                    <div v-if="tab === 3">
-                        Tab three
+
+                    <div @click="currentTab(3)" class="cursor-pointer">
+                        <a class="text-xl font-normal hover-text-400 text-gray-700 font-sans">Dinner</a>
+                    </div>
+
+                     <div @click="currentTab(4)" class="cursor-pointer">
+                        <a class="text-xl font-normal hover-text-400 text-gray-700 font-sans">Drinks</a>
                     </div>
                 </div>
             </div>
 
 
+            <div class="">
+                <div class="p-3 mt-6 flex justify-center">
+
+                    <!--DEFAULT TAB-->
+                    <div v-if="tab === 1">
+
+                        <!--GRID-->
+                       <div class="grid grid-cols-2 gap-6">
+
+                            <!--GRID BOX 1-->
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food2.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                              <!--GRID BOX 2-->
+                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food2.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- TAB 2-->
+                    <div v-if="tab === 2">
+                        
+                        <!--GRID-->
+                       <div class="grid grid-cols-2 gap-6">
+
+                            <!--GRID BOX 1-->
+                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food1.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                              <!--GRID BOX 2-->
+                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food1.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- TAB 3-->
+                    <div v-if="tab === 3">
+                        
+                        <!--GRID-->
+                       <div class="grid grid-cols-2 gap-6">
+
+                            <!--GRID BOX 1-->
+                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food3.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                              <!--GRID BOX 2-->
+                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food3.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- TAB 4-->
+                    <div v-if="tab === 4">
+                        <!--GRID-->
+                       <div class="grid grid-cols-2 gap-6">
+
+                            <!--GRID BOX 1-->
+                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food4.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                              <!--GRID BOX 2-->
+                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+
+                                <div class="">
+                                    <img src="/images/food4.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                </div>
+
+                                <div class="mt-6">
+                                    <h4>Roasted Marrow</h4>
+                                    <p>They're wherein heaven seed hath nothing</p>
+                                    <h4>$40.00</h4>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="py-3 flex justify-center mt-14">
+            <button class="py-3 px-4 bg-red-600 font-semibold hover:text-red-600 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded-lg">View More</button>
         </div>
 
     </div>
@@ -57,3 +214,7 @@
     };
 
 </script>
+
+<style>
+    
+</style>
