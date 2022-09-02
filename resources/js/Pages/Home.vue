@@ -22,19 +22,19 @@
                         </div>
 
                         <div class="py-3 px-3">
-                            <Link href="/"  class="text-2xl text-neutral-600 font-medium font-sans hover:text-gray-500">Home</Link>
+                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">Home</Link>
                         </div>
 
                         <div class="py-3 px-3">
-                            <Link href="/"  class="text-2xl text-neutral-600 font-medium font-sans hover:text-gray-500">Menu</Link>
+                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">Menu</Link>
                         </div>
 
                         <div class="py-3 px-3">
-                            <Link href="/"  class="text-2xl text-neutral-600 font-medium font-sans hover:text-gray-500">About</Link>
+                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">About</Link>
                         </div>
 
                         <div class="py-3 px-3">
-                            <Link href="/"  class="text-2xl text-neutral-600 font-medium font-sans hover:text-gray-500">Contact us</Link>
+                            <Link href="/"  class="text-xl font-medium text-neutral-600 font-sans hover:text-gray-500">Contact us</Link>
                         </div>
 
                         <div class="py-3 px-28">
