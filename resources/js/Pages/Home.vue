@@ -3,16 +3,24 @@
     <div>
         <!-- FIRST HOME SECTION -->
 
-       <div class="bg-red-100 px-6 py-4">
+       <div class="bg-red-100 px-2 lg:px-6 py-4">
 
             <!-- HOME NAV DISPLAY -->
             <Subnav />
 
-            <div class="flex space-x-12 justify-center items-center px-12 py-6">
-                <div class="space-y-6">
-                    <h4 id="cover-h4" class="text-4xl text-red-700 font-medium">Expensive But The Best</h4>
-                    <h1  class="text-6xl font-sans font-medium">Deliciousness jumping into the mouth</h1>
-                    <p class="font-serif font-medium text-lg">Together creeping heaven upon third dominion be upon won't darkness rule land behold it created good saw after she'd Our set living. Signs midst dominion creepeth morning</p>
+            <div class="flex flex-col-reverse px-2 mt-2 lg:mt-0 lg:flex lg:flex-row lg:space-x-12 lg:justify-center lg:items-center lg:px-12 lg:py-6">
+
+                <div class="space-y-6 mt-4">
+
+                    <h4 id="cover-h4" class="text-3xl lg:text-4xl text-red-700 font-medium">Expensive But The Best</h4>
+
+                    <h1  class="text-3xl lg:text-6xl font-sans font-medium">Deliciousness jumping into the mouth</h1>
+
+                    <p class="font-serif font-medium text-sm lg:text-lg">Together creeping heaven upon third dominion be upon won't darkness rule land behold it created good saw after she'd Our set living. Signs midst dominion creepeth morning</p>
+
+                    <div class="lg:hidden py-3">
+                        <button class="py-3 px-4 bg-red-700 font-semibold hover:text-red-700 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded-lg">Book Table</button>
+                    </div>
                 </div>
 
                 <div>
@@ -34,7 +42,7 @@
  // IMPORT SHARED LAYOUT
 import Layout from '../Shared/Layout.vue';
 
-//IMPORT SHARED FEATURE PRODUCT
+//IMPORT SHARED DISPLAY NAV
 import Subnav from '../Shared/Subnav.vue';
 
 export default {
