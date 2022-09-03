@@ -6,9 +6,9 @@
         <h1 class="text-3xl text-red-700 text-center mb-12 font-sans font-medium">OUR MENU</h1>
 
         <div class="container flex flex-col  mx-auto">
-            <div class="flex space-x-12 justify-center">
+            <div class="flex flex-col items-center lg:flex lg:justify-center lg:flex-row lg:space-x-6">
                 <div class="">
-                    <h2 class="text-3xl mr-36 font-sans font-medium">Delicious Food Menu</h2>
+                    <h2 class="text-3xl mb-6 lg:mb-0 underline underline-offset-8 decoration-red-500	 mr-36 font-sans font-medium">Delicious Food Menu</h2>
                 </div>
 
                 <div class="flex space-x-6">
@@ -38,36 +38,36 @@
                     <div v-if="tab === 1">
 
                         <!--GRID-->
-                       <div class="grid grid-cols-2 gap-6">
+                        <div class="grid grid-cols-1 gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
 
                             <!--GRID BOX 1-->
-                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
+                                <div class="mx-auto">
                                     <img src="/images/food2.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                               <!--GRID BOX 2-->
-                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
-                                    <img src="/images/food2.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                <div class="mx-auto">
+                                    <img src="/images/food2.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                         </div>
@@ -75,38 +75,38 @@
 
                     <!-- TAB 2-->
                     <div v-if="tab === 2">
-                        
+
                         <!--GRID-->
-                       <div class="grid grid-cols-2 gap-6">
+                       <div class="grid grid-cols-1 gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
 
                             <!--GRID BOX 1-->
-                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
-                                    <img src="/images/food1.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                <div class="mx-auto">
+                                    <img src="/images/food1.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                               <!--GRID BOX 2-->
-                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
-                                    <img src="/images/food1.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                <div class="mx-auto">
+                                    <img src="/images/food1.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                         </div>
@@ -114,38 +114,38 @@
 
                     <!-- TAB 3-->
                     <div v-if="tab === 3">
-                        
+
                         <!--GRID-->
-                       <div class="grid grid-cols-2 gap-6">
+                       <div class="grid grid-cols-1 gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
 
                             <!--GRID BOX 1-->
-                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
-                                    <img src="/images/food3.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                <div class="mx-auto">
+                                    <img src="/images/food4.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                               <!--GRID BOX 2-->
-                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
-                                    <img src="/images/food3.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                <div class="mx-auto">
+                                    <img src="/images/food4.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                         </div>
@@ -154,36 +154,36 @@
                     <!-- TAB 4-->
                     <div v-if="tab === 4">
                         <!--GRID-->
-                       <div class="grid grid-cols-2 gap-6">
+                       <div class="grid grid-cols-1 gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
 
                             <!--GRID BOX 1-->
-                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
-                                    <img src="/images/food4.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                <div class="mx-auto">
+                                    <img src="/images/food3.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                               <!--GRID BOX 2-->
-                            <div class="py-4 px-4 rounded-lg flex space-x-6 bg-white">
+                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="">
-                                    <img src="/images/food4.jpg" alt="meal" class="w-32 rounded-3xl object-cover">
+                                <div class="mx-auto">
+                                    <img src="/images/food3.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
                                 </div>
 
                                 <div class="mt-6">
-                                    <h4>Roasted Marrow</h4>
-                                    <p>They're wherein heaven seed hath nothing</p>
-                                    <h4>$40.00</h4>
+                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
+                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
+                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
-                                
+
                             </div>
 
                         </div>
@@ -216,5 +216,5 @@
 </script>
 
 <style>
-    
+
 </style>
