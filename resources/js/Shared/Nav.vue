@@ -1,7 +1,7 @@
 <template>
 
     <!-- NAV -->
-    <nav id="navbar" class="mx-auto">
+    <nav id="navbar" class="mx-auto z-[100]">
 
         <!-- NAV DIV -->
         <div class="flex bg-white  lg:px-6 justify-between mx-auto">

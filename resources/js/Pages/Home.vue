@@ -61,7 +61,19 @@
             <Submenu />
         </div>
 
+         <!-- FOURTH HOME SECTION -->
+        <div>
+            <Subbook />
+        </div>
+
         
+        <div class="mapouter flex justify-items-center mt-16 mx-auto">
+            <div class="gmap_canvas"><iframe width="100%" height="500px" id="gmap_canvas"    src="https://maps.google.com/maps?q=2%20Musa%20Yar'%20Adua%20Way,%20New%20Owerri%20460281,%20Owerri&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <a href="https://fmovies-online.net"></a><br>
+            </div>
+        </div>
+        
+
     </div>
 
 </template>
@@ -74,8 +86,11 @@ import Layout from '../Shared/Layout.vue';
 //IMPORT SHARED DISPLAY NAV
 import Subnav from '../Shared/Subnav.vue';
 
-//IMPORT SHARED DISPLAY NAV
+//IMPORT SHARED MENU
 import Submenu from '../Shared/Submenu.vue';
+
+//IMPORT SHARED  BOOKED
+import Subbook from '../Shared/Subbook.vue';
 
 export default {
     name: 'Home',
@@ -83,7 +98,8 @@ export default {
 
     components: {
         Subnav,
-        Submenu
+        Submenu,
+        Subbook
     },
 
 }
@@ -91,10 +107,26 @@ export default {
 
 <style>
 
+/** HOME IMPORTED GOOGLE FONT */
 @import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
 
+/** GOOGLE FONT USE */
 #cover-h4{
     font-family: 'Niconne', cursive;
+}
+
+/** hOME MAP */
+.mapouter{
+    position:relative;
+    text-align:right;
+    height:100%;
+    width:100%;
+}
+.gmap_canvas {
+    overflow:hidden;
+    background:none!important;
+    height:100%;
+    width:100%;
 }
 
 </style>
