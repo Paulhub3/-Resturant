@@ -3,7 +3,7 @@
     <div>
         <!-- FIRST HOME SECTION -->
 
-       <div class="bg-red-100 px-2 lg:px-6 py-4">
+        <div class="bg-red-100 px-2 lg:px-6 py-4">
 
             <!-- HOME NAV DISPLAY -->
             <Subnav />

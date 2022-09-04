@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return Inertia::render('Home');
 });
+
+Route::get('/menu', function () {
+    return Inertia::render('Menu');
+});

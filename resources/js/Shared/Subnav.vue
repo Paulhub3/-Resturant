@@ -23,11 +23,11 @@
                     </div>
 
                     <div class="py-3 px-3">
-                        <Link href="/"  class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">Home</Link>
+                        <Link href="/" :class="{ 'text-red-600': $page.component.startsWith('Home') }" class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">Home</Link>
                     </div>
 
                     <div class="py-3 px-3">
-                        <Link href="/"  class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">Menu</Link>
+                        <Link href="/menu" :class="{ 'text-red-600': $page.component.startsWith('Menu') }" class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">Menu</Link>
                     </div>
 
                     <div class="py-3 px-3">
@@ -51,12 +51,12 @@
                     <div class="absolute z-[100] flex-col bg-white px-4  h-72 overscroll-y-contain  py-8 mt-20 space-y-4 font-bold left-0 right-0">
 
                         <div @click="isOpen = !isOpen" class="font-bold py-4 px-3 ">
-                            <Link href="/"  class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Home</Link>
+                            <Link href="/" :class="{ 'text-red-600': $page.component.startsWith('Home') }" class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Home</Link>
                         </div>
 
 
                         <div @click="isOpen = !isOpen" class="font-bold py-4 px-3">
-                            <Link href="/"  class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Menu</Link>
+                            <Link href="/menu" :class="{ 'text-red-600': $page.component.startsWith('Menu') }" class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Menu</Link>
                         </div>
 
                         

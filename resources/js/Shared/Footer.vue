@@ -44,15 +44,15 @@
                     <h1 class="font-medium font-sans text-xl mb-4 ml-6 text-gray-800">Visit us</h1>
                     <div class="flex space-x-6">
 
-                        <div style=" color: black;">
+                        <div style=" color:  #002699;">
                             <a href="http://"><i class="fa-brands fa-facebook fa-3x fa-beat" style="--fa-animation-duration: 2s;"></i></a>
                         </div>
 
-                        <div style=" color: black;">
+                        <div style=" color: #ff4742;">
                             <a href="http://"><i class="fa-brands fa-square-instagram fa-3x fa-beat" style="--fa-animation-duration: 2s;"></i></a>
                         </div>
 
-                        <div style=" color: black;">
+                        <div style=" color: green;">
                             <a href="http://"><i class="fa-brands fa-square-whatsapp fa-3x fa-beat" style="--fa-animation-duration: 0.6s;"></i></a>
                         </div>
 

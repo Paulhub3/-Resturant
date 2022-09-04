@@ -3,11 +3,11 @@
     <!-- THIRD HOME SECTION -->
     <div class="mt-16 bg-gray-100 py-6 px-4">
 
-        <h1 class="text-3xl text-red-700 text-center mb-12 font-sans font-medium">OUR MENU</h1>
 
         <div class="container flex flex-col  mx-auto">
             <div class="flex flex-col items-center lg:flex lg:justify-center lg:flex-row lg:space-x-6">
-                <div class="">
+                <div class="flex flex-col">
+                     <h1 class="text-lg text-red-700  font-sans font-medium">Popular Menu</h1>
                     <h2 class="text-3xl mb-6 lg:mb-0 underline underline-offset-8 decoration-red-500	 mr-36 font-sans font-medium">Delicious Food Menu</h2>
                 </div>
 
