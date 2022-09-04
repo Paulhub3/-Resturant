@@ -24,16 +24,6 @@
 
         <!-- SECOND MENU SECTION -->
         <div>
-            <div class="flex justify-center space-x-6 mb-12 mt-16">
-
-                <button class="py-3 px-4 bg-red-600 font-semibold hover:text-red-600 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded">BOOK NOW TABLE</button>
-
-                <button class="py-3 px-4 bg-black font-semibold hover:text-red-600 hover:bg-white font-sans hover:border hover:border-white text-white rounded">ORDER ONLINE</button>
-            </div>
-        </div>
-
-        <!-- THIRD MENU SECTION -->
-        <div>
             <Submenu />
         </div>
         

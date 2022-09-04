@@ -21,3 +21,11 @@ Route::get('/', function () {
 Route::get('/menu', function () {
     return Inertia::render('Menu');
 });
+
+Route::get('/about-us', function () {
+    return Inertia::render('About');
+});
+
+Route::get('/contact-us', function () {
+    return Inertia::render('Contact');
+});

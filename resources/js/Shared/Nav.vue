@@ -31,15 +31,15 @@
                 </div>
 
                 <div class="py-3 px-3">
-                    <Link href="/"  class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">About</Link>
+                    <Link href="/about-us" :class="{ 'text-red-600': $page.component.startsWith('About') }" class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">About</Link>
                 </div>
 
                 <div class="py-3 px-3">
-                    <Link href="/"  class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">Contact us</Link>
+                    <Link href="/contact-us" :class="{ 'text-red-600': $page.component.startsWith('Contact') }"  class="text-xl font-medium text-gray-700 font-sans hover:text-red-500">Contact us</Link>
                 </div>
 
                 <div class="py-3 px-24">
-                    <button class="py-3 px-4 bg-red-700 font-semibold hover:text-red-700 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded-lg">Book Table</button>
+                    <a href="#book" class="py-3 px-4 bg-red-700 font-semibold hover:text-red-700 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded-lg">Book Table</a>
                 </div>
 
             </div>
@@ -50,7 +50,7 @@
                 <div class="lg:hidden" v-if="Open">
 
 
-                    <div class="absolute z-[100] flex-col bg-white px-4  h-72 overscroll-y-contain  py-8 mt-16 space-y-4 font-bold left-0 right-0">
+                    <div class="absolute z-[100] flex-col bg-white px-4 h-96 overscroll-y-contain overflow-x-scroll self-end py-8 mt-14 space-y-4 font-bold sm:w-auto left-0 right-0">
 
                         <div @click="Open = !Open" class="font-bold py-4 px-3 ">
                             <Link href="/" :class="{ 'text-red-600': $page.component.startsWith('Home') }" class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Home</Link>
@@ -61,9 +61,13 @@
                             <Link href="/menu" :class="{ 'text-red-600': $page.component.startsWith('Menu') }"  class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Menu</Link>
                         </div>
 
+                        <div @click="isOpen = !isOpen" class="font-bold py-4 px-3">
+                            <Link href="/about-us" :class="{ 'text-red-600': $page.component.startsWith('About') }" class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">About</Link>
+                        </div>
+
                                 
                         <div @click="Open = !Open" class="font-bold py-4 px-3">
-                            <Link href="/"  class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Contact us</Link>
+                            <Link href="/contact-us" :class="{ 'text-red-600': $page.component.startsWith('Contact') }"  class="text-gray-700 font-sans text-lg hover:underline hover:underline-offset-8 decoration-4 decoration-red-600 hover:text-gray-400 underline-none">Contact us</Link>
                         </div>
 
 

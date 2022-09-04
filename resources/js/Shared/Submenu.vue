@@ -209,10 +209,6 @@
 
         </div>
 
-        <div class="py-3 flex justify-center mt-14">
-            <button class="py-3 px-4 bg-red-600 font-semibold hover:text-red-600 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded-lg">View More</button>
-        </div>
-
     </div>
 
 </template>

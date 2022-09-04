@@ -3,7 +3,7 @@
      <!-- FOURTH HOME SECTION -->
     <div>
 
-        <div class="bg-gray-600 z-40  mt-12  w-full h-full bg-cover bg-center relative">
+        <a id="book" class="bg-gray-600 z-40  mt-12  w-full h-full bg-cover bg-center relative">
 
             <img src="/images/booked.jpg" alt="banner" class="w-full h-full bg-no-repeat object-cover absolute mix-blend-overlay">
 
@@ -72,7 +72,7 @@
                 </div>
 
             </div>
-        </div>
+        </a>
     </div>
 
 </template>

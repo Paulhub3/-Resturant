@@ -24,7 +24,7 @@
                 </div>
 
                 <!-- SECOND GRID-->
-                <div class="w-96 mx-auto flex space-x-4 py-3 px-3">
+                <div class="w-80 md:w-96 mx-auto flex space-x-4 py-3 px-3">
 
                     <div>
                         <i class="fa-solid fa-location-dot fa-3x"></i>
