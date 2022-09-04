@@ -31,7 +31,7 @@
                                 </div>
                             </div>
 
-                            
+
                             <div class="flex flex-col lg:flex md:flex-row md:space-x-12 lg:space-x-6">
                                 <div class="mb-8">
                                     <input  type="text" name="firstname" id="" placeholder="persons*" class="border-b-4 border-sky-700 py-4 placeholder:text-gray-600 placeholder:text-base placeholder:font-medium placeholder:font-sans px-3 w-full md:w-80 lg:w-96 rounded focus:outline-none focus:border-none focus:ring-white block sm:text-sm focus:ring-0">

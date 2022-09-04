@@ -32,7 +32,7 @@
 
 
             <div class="">
-                <div class="p-3 mt-6 flex justify-center">
+                <div class="p-3 mt-16 flex justify-center">
 
                     <!--DEFAULT TAB-->
                     <div v-if="tab === 1">
@@ -196,7 +196,7 @@
         </div>
 
 
-        <div class="py-3 flex flex-col items-center mt-14">
+        <div class="py-3 mt-20  flex flex-col items-center ">
 
             <h1 class="text-lg font-medium text-gray-600 font-sans"><span class="text-red-600 ">KITCHEN OPEN:</span> MON-SAT 12-10PM / SUN 12PM-9:30PM</h1>
 
