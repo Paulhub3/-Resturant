@@ -2,7 +2,7 @@
     <div>
 
         <div>
-            <Flash />
+            <Flash/>
         </div>
 
         <div class="md:container md:mx-auto md:flex md:justify-center mt-24">
@@ -49,11 +49,10 @@
 </template>
 
 <script setup>
-    import { useForm } from '@inertiajs/inertia-vue3';
+    import { useForm } from '@inertiajs/inertia-vue3'
 
     //IMPORT SHARED FLASH MESSAGE
     import Flash from '../Shared/Flash.vue'
-
 
     let form = useForm({
         name: '',

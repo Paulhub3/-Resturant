@@ -23,7 +23,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect('/am-admin-message')->with('message', 'You have Successfully Logged in As Admin');
+            return redirect('/');
         }
 
         return back()->withErrors([
