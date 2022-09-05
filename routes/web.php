@@ -2,6 +2,8 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +31,11 @@ Route::get('/about-us', function () {
 Route::get('/contact-us', function () {
     return Inertia::render('Contact');
 });
+
+/* ADMIN REGISTER ROUTE */
+Route::get('/admin-control-register', [RegisterController::class, 'index']);
+Route::post('/admin-control-register', [RegisterController::class, 'store']);
+
+/* ADMIN LOGIN ROUTE */
+Route::get('/admin-control-login', [LoginController::class, 'index'])->name('login');
+Route::post('/admin-control-login', [LoginController::class, 'store']);
