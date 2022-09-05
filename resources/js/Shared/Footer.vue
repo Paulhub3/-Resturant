@@ -7,7 +7,7 @@
 
             <h1 class="text-center font-bold text-2xl font-sans mb-6">FIND US</h1>
 
-            <div class=" grid justify-items-center grid-cols-1 gap-7 md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-3 lg:gap-4  px-3 ">
+            <div class="container grid grid-cols-1 gap-4  md:flex  md:justify-between md:item-center px-3 mx-auto  ">
 
 
                 <!-- FIRST GRID-->
@@ -65,7 +65,7 @@
         </div>
 
         <!-- Last Footer Flex container -->
-        <div class="p-6 bg-red-100">
+        <div class="p-6 bg-red-300">
             <div class="container">
                 <h3 class="text-black font-sans font-normal text-sm md:text-lg text-justify">
                      &copy; 2018 - All Rights Reserved, Hungry Man Restau. ant
