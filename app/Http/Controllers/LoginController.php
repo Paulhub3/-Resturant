@@ -23,7 +23,7 @@ class LoginController extends Controller
         if (Auth::attempt($users)) {
             $request->session()->regenerate();
 
-            return redirect('/');
+            return redirect('/admin-dashboard-control');
         }
 
         return back()->withErrors([

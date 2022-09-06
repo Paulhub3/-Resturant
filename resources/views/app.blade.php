@@ -23,6 +23,7 @@
             document.getElementById("navbar").style.top = "-50%";
         }
         }
+        
 
     </script>
   </body>

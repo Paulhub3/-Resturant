@@ -80,7 +80,7 @@
     import Subnav from '../Shared/Subnav.vue';
 
     export default {
-        name: 'Menu',
+        name: 'About',
         layout: Layout,
 
         components: {

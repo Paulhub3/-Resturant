@@ -39,3 +39,8 @@ Route::post('/admin-control-register', [RegisterController::class, 'store']);
 /* ADMIN LOGIN ROUTE */
 Route::get('/admin-control-login', [LoginController::class, 'index'])->name('login');
 Route::post('/admin-control-login', [LoginController::class, 'store']);
+
+/* ADMIN MAIN HOME */
+Route::get('/admin-dashboard-control', function () {
+    return Inertia::render('Dashboard');
+});
