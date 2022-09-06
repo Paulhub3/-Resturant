@@ -20,11 +20,12 @@
             <form @submit.prevent="submit" class="flex-col">
 
                 <div>
-                    <input type="text" v-model="form.name" />
+                    <input type="text"  v-model="form.avatar" />
                 </div>
 
                 <div>
-                    <input type="file" @input="form.avatar = $event.target.files[0]" />
+                    <input type="file" name="picture" @input="form.picture = $event.target.files[0]" />
+                    <div v-if="form.errors.picture" class="text-red-600 mt-2 text-base">{{ form.errors.picture }}</div>
                 </div>
 
                 <div>
@@ -61,12 +62,12 @@ export default {
 
     setup () {
     const form = useForm({
-      name: '',
+      picture: '',
       avatar: '',
     })
 
     function submit() {
-      form.post('/users')
+      form.post('/admin-update')
     }
 
     return { form, submit }

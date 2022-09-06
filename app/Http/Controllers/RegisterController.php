@@ -28,4 +28,18 @@ class RegisterController extends Controller
 
         return redirect('/admin-control-login')->with('message', 'Your Account was Successfully Created');
     }
+
+    public function create()
+    {
+        return Inertia::render('Dashboard');
+    }
+
+    public function update(Request $request)
+    {
+        $user = $request->validate([
+
+            'picture' => ['required', 'max:255'],
+        ]);
+
+    }
 }

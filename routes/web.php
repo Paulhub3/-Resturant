@@ -41,6 +41,5 @@ Route::get('/admin-control-login', [LoginController::class, 'index'])->name('log
 Route::post('/admin-control-login', [LoginController::class, 'store']);
 
 /* ADMIN MAIN HOME */
-Route::get('/admin-dashboard-control', function () {
-    return Inertia::render('Dashboard');
-});
+Route::get('/admin-dashboard-control', [RegisterController::class, 'create'])->middleware('auth');
+Route::post('/admin-update', [RegisterController::class, 'update']);
