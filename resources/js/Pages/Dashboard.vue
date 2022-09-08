@@ -1,7 +1,6 @@
 <template>
 
     <div>
-
         <!--NAV BAR -->
         <div>
             <Navbar />
@@ -12,34 +11,41 @@
             <Sidebar />
         </div>
 
-        <div class="ml-[30%] mt-12">
+        <div class="ml-[30%] mt-14 ">
 
-            <div>
-                <h1 class="text-xl font-medium text-sky-800">Change Home Background  Picture</h1>
+            <div class="mb-9">
+                <h1 class="text-3xl font-medium text-sky-800">Create Menu</h1>
             </div>
-            <form @submit.prevent="submit" class="flex-col">
+
+            <div class="grid grid-cols-2 gap-4 md:flex md:flex-row md:items-center md:space-x-6">
 
                 <div>
-                    <input type="text"  v-model="form.avatar" />
-                </div>
-
-                <div>
-                    <input type="file" name="picture" @input="form.picture = $event.target.files[0]" />
-                    <div v-if="form.errors.picture" class="text-red-600 mt-2 text-base">{{ form.errors.picture }}</div>
+                    <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white" >
+                        <Link href="/breakfast-menu" type="submit">Breakfast</Link>
+                    </button>
                 </div>
 
                 <div>
-                    <progress v-if="form.progress" :value="form.progress.percentage" max="100">
-                        {{ form.progress.percentage }}%
-                    </progress>
+                    <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white" >
+                        <Link href="/lunch-menu"  type="submit">Lunch</Link>
+                    </button>
                 </div>
 
-                <div class="mt-6">
-                     <button class="py-2 px-4 bg-sky-600 text-base font-sans rounded-md text-white" type="submit">Submit</button>
+                <div>
+                    <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white">
+                        <Link href="/dinner-menu" type="submit">Dinner</Link>
+                    </button>
                 </div>
-            </form>
 
+                <div>
+                    <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white">
+                        <Link href="/drinks-menu"  type="submit">Drinks</Link>
+                    </button>
+                </div>
+            </div>
         </div>
+
+
 
     </div>
 
@@ -49,7 +55,6 @@
  // IMPORT NAVBAR AND SIDE BAR
 import Navbar from '../Admin/Navbar.vue';
 import Sidebar from '../Admin/Sidebar.vue';
-import { useForm } from '@inertiajs/inertia-vue3'
 
 
 export default {
@@ -59,20 +64,6 @@ export default {
          Navbar ,
         Sidebar
     },
-
-    setup () {
-    const form = useForm({
-      picture: '',
-      avatar: '',
-    })
-
-    function submit() {
-      form.post('/admin-update')
-    }
-
-    return { form, submit }
-  },
-
 
 
 }

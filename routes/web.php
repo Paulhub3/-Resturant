@@ -3,6 +3,7 @@
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -20,17 +21,15 @@ Route::get('/', function () {
     return Inertia::render('Home');
 });
 
-Route::get('/menu', function () {
-    return Inertia::render('Menu');
-});
 
-Route::get('/about-us', function () {
-    return Inertia::render('About');
-});
+/* CONTACT PAGE */
+Route::get('/contact-us', [MessageController::class, 'index']);
+Route::post('/contact-us-msg', [MessageController::class, 'store']);
 
-Route::get('/contact-us', function () {
-    return Inertia::render('Contact');
-});
+/* ADMIN MESSAGE ROUTE */
+Route::get('/admin-message', [MessageController::class, 'create'])->middleware('auth');
+Route::delete('/admin-message/{id}/destroy', [MessageController::class, 'destroy']);
+
 
 /* ADMIN REGISTER ROUTE */
 Route::get('/admin-control-register', [RegisterController::class, 'index']);
@@ -42,4 +41,23 @@ Route::post('/admin-control-login', [LoginController::class, 'store']);
 
 /* ADMIN MAIN HOME */
 Route::get('/admin-dashboard-control', [RegisterController::class, 'create'])->middleware('auth');
-Route::post('/admin-update', [RegisterController::class, 'update']);
+Route::post('/admin-update', [RegisterController::class, 'upload']);
+
+
+/* ADMIN MENU CREATE LINKS */
+
+Route::get('/breakfast-menu', function () {
+    return Inertia::render('Breakfast');
+});
+
+Route::get('/dinner-menu', function () {
+    return Inertia::render('Dinner');
+});
+
+Route::get('/drinks-menu', function () {
+    return Inertia::render('Drinks');
+});
+
+Route::get('/lunch-menu', function () {
+    return Inertia::render('Lunch');
+});

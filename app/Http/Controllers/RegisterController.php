@@ -34,12 +34,13 @@ class RegisterController extends Controller
         return Inertia::render('Dashboard');
     }
 
-    public function update(Request $request)
+    public function upload(Request $request)
     {
-        $user = $request->validate([
 
-            'picture' => ['required', 'max:255'],
+        $request->validate([
+            'picture' => ['required']
         ]);
+
 
     }
 }

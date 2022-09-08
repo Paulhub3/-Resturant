@@ -4,7 +4,7 @@
     <div class="mt-16 bg-gray-100 py-6 px-4">
 
 
-        <div class="container flex flex-col  mx-auto">
+        <div id="menu" class="container flex flex-col  mx-auto">
             <div class="flex flex-col items-center lg:flex lg:justify-center lg:flex-row lg:space-x-6">
                 <div class="flex flex-col">
                      <h1 class="text-lg text-red-700  font-sans font-medium">Popular Menu</h1>
