@@ -3,7 +3,7 @@
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\MessageController;
+use App\Http\Controllers\BookedController;
 use App\Http\Controllers\RegisterController;
 
 /*
@@ -22,13 +22,13 @@ Route::get('/', function () {
 });
 
 
-/* CONTACT PAGE */
-Route::get('/contact-us', [MessageController::class, 'index']);
-Route::post('/contact-us-msg', [MessageController::class, 'store']);
+/* BOOKED SIDE */
+Route::post('/book-table', [BookedController::class, 'index']);
+Route::post('/booked', [BookedController::class, 'store']);
 
-/* ADMIN MESSAGE ROUTE */
-Route::get('/admin-message', [MessageController::class, 'create'])->middleware('auth');
-Route::delete('/admin-message/{id}/destroy', [MessageController::class, 'destroy']);
+/* ADMIN BOOK ROUTE */
+Route::get('/admin-book', [BookedController::class, 'create'])->middleware('auth');
+Route::delete('/admin-book/{id}/destroy', [BookedController::class, 'destroy']);
 
 
 /* ADMIN REGISTER ROUTE */
@@ -40,7 +40,7 @@ Route::get('/admin-control-login', [LoginController::class, 'index'])->name('log
 Route::post('/admin-control-login', [LoginController::class, 'store']);
 
 /* ADMIN MAIN HOME */
-Route::get('/admin-dashboard-control', [RegisterController::class, 'create'])->middleware('auth');
+Route::get('/admin-dashboard-control', [RegisterController::class, 'create']);
 Route::post('/admin-update', [RegisterController::class, 'upload']);
 
 

@@ -5,14 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Contact extends Model
+class Booked extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'firstname',
+        'fullname',
         'phone',
-        'email',
-        'massage',
+        'email',  
+        'time',
+        'date',
+        'person',
+        'note',
     ];
 }

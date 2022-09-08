@@ -61,7 +61,7 @@ export default {
     name: 'Dashboard',
 
     components: {
-         Navbar ,
+        Navbar ,
         Sidebar
     },
 

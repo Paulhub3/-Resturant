@@ -16,7 +16,7 @@
                     <!--  MENU TEXT -->
                     <div class="z-40 flex justify-center mt-16">
                         <button class="z-40  py-3 px-4 bg-red-700 font-semibold hover:text-red-700 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded-lg">
-                            <Link href="/contact-us">ENQUIRE NOW</Link>
+                            <Link href="/book-table">ENQUIRE NOW</Link>
                         </button>
                     </div>
 
