@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BookedController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\BreakfastController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +24,7 @@ Route::get('/', function () {
 
 
 /* BOOKED SIDE */
-Route::post('/book-table', [BookedController::class, 'index']);
+Route::get('/book-table', [BookedController::class, 'index']);
 Route::post('/booked', [BookedController::class, 'store']);
 
 /* ADMIN BOOK ROUTE */
@@ -41,14 +42,16 @@ Route::post('/admin-control-login', [LoginController::class, 'store']);
 
 /* ADMIN MAIN HOME */
 Route::get('/admin-dashboard-control', [RegisterController::class, 'create']);
-Route::post('/admin-update', [RegisterController::class, 'upload']);
 
 
 /* ADMIN MENU CREATE LINKS */
 
-Route::get('/breakfast-menu', function () {
-    return Inertia::render('Breakfast');
-});
+
+/* BREAK FAST SIDE */
+Route::get('/breakfast-menu', [BreakfastController::class, 'index']);
+Route::post('/breakfast', [BreakfastController::class, 'store']);
+
+
 
 Route::get('/dinner-menu', function () {
     return Inertia::render('Dinner');

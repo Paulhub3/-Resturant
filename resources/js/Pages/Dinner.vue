@@ -15,7 +15,7 @@
         <div class="ml-[30%] mt-12">
 
             <div>
-                <h1 class="text-xl font-medium text-sky-800"> Create Breakfast Menu </h1>
+                <h1 class="text-xl font-medium text-sky-800"> Create Dinner Menu </h1>
             </div>
 
             <form action="" method="post" class="mt-9">
@@ -63,12 +63,12 @@
 
 <script>
  // IMPORT NAVBAR AND SIDE BAR
-import Navbar from '../../Admin/Navbar.vue';
-import Sidebar from '../../Admin/Sidebar.vue';
+import Navbar from '../Admin/Navbar.vue';
+import Sidebar from '../Admin/Sidebar.vue';
 
 
 export default {
-    name: 'Breakfast',
+    name: 'Dinner',
 
     components: {
         Navbar ,

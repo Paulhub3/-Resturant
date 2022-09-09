@@ -21,25 +21,25 @@
 
                 <div>
                     <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white" >
-                        <Link href="/breakfast-menu" type="submit">Breakfast</Link>
+                        <Link href="/breakfast-menu">Breakfast</Link>
                     </button>
                 </div>
 
                 <div>
                     <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white" >
-                        <Link href="/lunch-menu"  type="submit">Lunch</Link>
+                        <Link href="/lunch-menu">Lunch</Link>
                     </button>
                 </div>
 
                 <div>
                     <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white">
-                        <Link href="/dinner-menu" type="submit">Dinner</Link>
+                        <Link href="/dinner-menu">Dinner</Link>
                     </button>
                 </div>
 
                 <div>
                     <button class="py-2 px-4 bg-sky-800 text-base font-sans rounded-md text-white">
-                        <Link href="/drinks-menu"  type="submit">Drinks</Link>
+                        <Link href="/drinks-menu">Drinks</Link>
                     </button>
                 </div>
             </div>

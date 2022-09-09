@@ -20,6 +20,7 @@
         "@inertiajs/progress": "^0.2.7",
         "@vitejs/plugin-vue": "^3.0.3",
         "@vue/compiler-sfc": "^3.2.38",
+        "flowbite": "^1.5.3",
         "vue": "^3.2.36"
     }
 }

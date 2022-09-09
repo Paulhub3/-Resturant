@@ -78,7 +78,7 @@
         </div>
 
 
-        <!-- SIXTH HOME SECTION CONTANT US  -->
+        <!-- SIXTH HOME SECTION CONTACT US  -->
         <div class="mt-24">
             <Contact />
         </div>
@@ -108,8 +108,12 @@ import Menu from '../Shared/Menu.vue'
  // IMPORT SHARED COMPONENT FOR BOOKED
 import Book from '../Shared/Book.vue'
 
-// IMPORT SHARED COMPONENT FOR CONTACT US
+
+ // IMPORT SHARED COMPONENT FOR  CONTACT US
 import Contact from '../Shared/Contact.vue'
+
+ //IMPORT SHARED FLASH MESSAGE
+import Flash from '../Shared/Flash.vue';
 
 
 export default {
@@ -121,7 +125,8 @@ export default {
         Subnav,
         Menu,
         Book,
-        Contact
+        Contact,
+        Flash
     },
 
 }

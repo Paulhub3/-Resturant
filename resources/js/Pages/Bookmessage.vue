@@ -11,7 +11,7 @@
             <Sidebar />
         </div>
 
-        <div class="lg:p-8 ml-[30%] mt-12" style="overflow-x:auto;">
+        <div  class="lg:p-8 ml-[30%] mt-12" style="overflow-x:auto;">
             <table class="border-collapse  border-2 border-gray-300">
                 <tr>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">S/N</th>
@@ -26,7 +26,7 @@
                 </tr>
                 <tr v-for="booked in booked.data" :key="booked.id">
                     <td >{{ booked.id }}</td>
-                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ booked.firstname }}</td>
+                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ booked.fullname }}</td>
                     <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ booked.phone }}</td>
                     <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ booked.email }}</td>
                     <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ booked.time }}</td>
