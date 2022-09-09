@@ -51,6 +51,10 @@ Route::get('/admin-dashboard-control', [RegisterController::class, 'create']);
 Route::get('/breakfast-menu', [BreakfastController::class, 'index']);
 Route::post('/breakfast', [BreakfastController::class, 'store']);
 
+/* ADMIN DASHBORD */
+Route::get('/breakfast-table', [BreakfastController::class, 'create'])->middleware('auth');
+Route::delete('/breakfast-table/{id}/destroy', [BreakfastController::class, 'destroy']);
+
 
 
 Route::get('/dinner-menu', function () {

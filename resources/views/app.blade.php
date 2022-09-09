@@ -12,8 +12,6 @@
     @inertia
     @vite('resources/js/app.js')
 
-    <script src="../path/to/flowbite/dist/flowbite.js"></script>
-
     ​<script>
         //When the user scrolls down 20px from the top of the document, slide down the navbar
         window.onscroll = function() {scrollFunction()};
@@ -25,7 +23,7 @@
             document.getElementById("navbar").style.top = "-50%";
         }
         }
-        
+
 
     </script>
   </body>

@@ -42,7 +42,7 @@
                 <div class="mb-4">
 
                     <div>
-                        <input type="file"  name="image" class=""/>
+                        <input type="file" name="image" @input="form.image = $event.target.files[0]" />
                         <div  class="text-red-600 mt-2 text-base"></div>
                     </div>
 
@@ -87,7 +87,9 @@ export default {
         });
 
         function submit(){
-            form.post('/breakfast')
+            form.post('/breakfast'), {
+                forceFormData: true,
+            }
         }
 
         return { form , submit};

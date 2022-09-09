@@ -62,9 +62,10 @@
 </template>
 
 <script>
- // IMPORT NAVBAR AND SIDE BAR
+// IMPORT NAVBAR AND SIDE BAR
 import Navbar from '../Admin/Navbar.vue';
 import Sidebar from '../Admin/Sidebar.vue';
+
 
 
 export default {

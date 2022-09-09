@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <nav>
         <!--SIDE BAR -->
-        <div class=" fixed h-full lg:left-0  overflow-y-auto text-center bg-gray-900">
+        <div class="fixed h-full lg:left-0  overflow-y-auto text-center bg-gray-900">
 
             <div class="hidden lg:block p-2 w-[300px]">
 
@@ -37,19 +37,39 @@
                 </div>
 
                 <!-- MENU LINK -->
-                <div class="text-gray-100 mt-12 text-xl">
+                <div>
 
-                    <Link href="/admin-menu-view" :class="{'text-sky-600': $page.component.startsWith('Admenu') }" class="p-2.5 mt-12 flex items-center">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-blue-600">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
-                            </svg>
+                    <div class="text-gray-100 mt-12 dropdown relative text-xl">
 
-                        </span>
-                        <h1 class="font-bold text-gray-200 text-[20px] ml-3 hover:underline decoration-1 decoration-white hover:text-sky-300">Menu</h1>
 
-                    </Link>
+                        <button  class="p-2.5 flex items-center" type="button">
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-blue-600">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
+                                </svg>
 
+                            </span>
+                            <h1 class="font-bold text-gray-200 text-[20px] ml-3 hover:underline decoration-1 decoration-white hover:text-sky-300">Menu</h1>
+
+                        </button>
+
+
+                        <ul  class="dropdown-menu absolute px-4 py-3 rounded-lg w-56 hidden text-gray-700 pt-1 bg-slate-700">
+                            <li>
+                                <Link href="/breakfast-table" class="block py-2 hover:underline decoration-1 decoration-white hover:text-sky-300 text-xl text-justify text-white">Breakfast</Link>
+                            </li>
+                            <li>
+                                <Link href="#" class="block py-2 hover:underline decoration-1 decoration-white hover:text-sky-300 text-xl text-justify text-white">Lunch</Link>
+                            </li>
+                            <li>
+                                <Link href="#" class="block py-2 hover:underline decoration-1 decoration-white hover:text-sky-300 text-xl text-justify text-white">Dinner</Link>
+                            </li>
+                            <li>
+                                <Link href="#" class="block py-2 hover:underline decoration-1 decoration-white hover:text-sky-300 text-xl text-justify text-white">Drinks</Link>
+                            </li>
+                        </ul>
+
+                    </div>
                     <div class="my-2 bg-gray-600 h-[1px]"></div>
                 </div>
 
@@ -147,5 +167,11 @@
 
         </div>
 
-    </div>
+    </nav>
 </template>
+
+<style scoped>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>

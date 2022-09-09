@@ -103,7 +103,7 @@ defineProps({
 </script>
 
 
-<style>
+<style scoped>
     #navbar{
         position: fixed;
         top: -50%;
