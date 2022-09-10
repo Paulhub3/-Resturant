@@ -2,6 +2,7 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BookedController;
@@ -18,9 +19,9 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Home');
-});
+
+/* HOME */
+Route::get('/', [HomeController::class, 'index']);
 
 
 /* BOOKED SIDE */

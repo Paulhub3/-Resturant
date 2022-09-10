@@ -23,7 +23,6 @@ class MenuController extends Controller
             'category' => ['required', 'max:255'],
             'prize' => ['required', 'max:255'],
             'image' => ['required'],
-            'picture' => ['required'],
         ]);
 
         $menu = new Menu;

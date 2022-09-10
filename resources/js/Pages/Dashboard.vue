@@ -55,7 +55,6 @@
                 <div class="mb-4">
 
                     <div class="flex flex-col">
-                        <input type="text" v-model="form.picture" />
                         <input type="file" name="image" @input="form.image = $event.target.files[0]" />
                         <div v-if="form.errors.picture" class="text-red-600 mt-2 text-lg font-medium">{{ form.errors.picture}}</div>
                     </div>
@@ -99,7 +98,6 @@ export default {
             category: '',
             prize: '',
             image: '',
-            picture: '',
         });
 
         function submit(){

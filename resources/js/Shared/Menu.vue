@@ -34,46 +34,33 @@
             <div class="">
                 <div class="p-3 mt-16 flex justify-center">
 
-                    <!--DEFAULT TAB-->
-                    <div v-if="tab === 1">
+                    <!--DEFAULT TAB BREAK FAST-->
+                    <div  v-if="tab === 1">
 
                         <!--GRID-->
-                        <div class="grid grid-cols-1 gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
+                        <div v-for="breakfast in breakfast" :key="breakfast.id">
+                            <div  class="grid grid-cols-1 gap-4 lg:grid lg:grid-cols-2 lg:gap-6">
 
-                            <!--GRID BOX 1-->
-                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
+                                <!--GRID BOX 1-->
+                                <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
 
-                                <div class="mx-auto">
-                                    <img src="/images/food2.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
-                                </div>
+                                    <div class="mx-auto">
+                                        <img :src="'/public/' + '/images/' + breakfast.image" class="w-32 rounded-full lg:rounded-3xl object-cover" />
+                                    </div>
 
-                                <div class="mt-6">
-                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
-                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
-                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
-                                </div>
+                                    <div class="mt-6">
+                                        <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">{{ breakfast.foodname }}</h4>
+                                        <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">{{ breakfast.aboutfood }}</p>
+                                        <h4 class="text-center text-xl font-normal text-red-500 font-sans">{{ breakfast.prize }}</h4>
+                                    </div>
 
-                            </div>
-
-                              <!--GRID BOX 2-->
-                            <div class="py-4 px-4 rounded-lg flex flex-col justify-center lg:flex lg:flex-row lg:space-x-6 bg-white">
-
-                                <div class="mx-auto">
-                                    <img src="/images/food2.jpg" alt="meal" class="w-32 rounded-full lg:rounded-3xl object-cover">
-                                </div>
-
-                                <div class="mt-6">
-                                    <h4 class="text-center text-2xl mb-3 font-normal text-gray-700 font-sans">Roasted Marrow</h4>
-                                    <p class="text-center text-base mb-4 font-normal text-gray-500 font-sans">They're wherein heaven seed hath nothing</p>
-                                    <h4 class="text-center text-xl font-normal text-red-500 font-sans">$40.00</h4>
                                 </div>
 
                             </div>
-
                         </div>
                     </div>
 
-                    <!-- TAB 2-->
+                    <!-- TAB 2 LUNCH-->
                     <div v-if="tab === 2">
 
                         <!--GRID-->
@@ -213,6 +200,11 @@
 <script>
     import { ref } from 'vue';
     export default {
+
+        props: {
+            breakfast: Array,
+        },
+
         setup() {
             const tab = ref(1);
             const currentTab = (tabNumber) => (tab.value = tabNumber);
