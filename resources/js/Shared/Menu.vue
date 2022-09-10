@@ -200,11 +200,8 @@
 
             <h1 class="text-lg font-medium text-gray-600 font-sans"><span class="text-red-600 ">KITCHEN OPEN:</span> MON-SAT 12-10PM / SUN 12PM-9:30PM</h1>
 
-            <div class="space-x-6 mt-6">
-
-                <button class="py-3 px-4 bg-red-600 font-semibold hover:text-red-600 hover:bg-white font-sans hover:border hover:border-red-600 text-white rounded">BOOK NOW TABLE</button>
-
-                <button class="py-3 px-4 bg-black font-semibold hover:text-red-600 hover:bg-white font-sans hover:border hover:border-white text-white rounded">ORDER ONLINE</button>
+            <div class="mt-6">
+                <Link class="py-3 px-4 bg-black font-semibold hover:text-red-600 hover:bg-white font-sans hover:border hover:border-white text-white rounded">ORDER ONLINE</Link>
             </div>
 
         </div>

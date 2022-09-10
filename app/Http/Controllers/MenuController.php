@@ -2,54 +2,57 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Menu;
 use Inertia\Inertia;
-use App\Models\Breakfast;
 use Illuminate\Http\Request;
 
-class BreakfastController extends Controller
+class MenuController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Breakfast');
+        return Inertia::render('Dashboard');
     }
 
     public function store(Request $request)
     {
 
-        $breakfast = $request->validate([
+        $menu = $request->validate([
 
             'foodname' => ['required', 'max:255'],
             'aboutfood' => ['required', 'max:255'],
+            'category' => ['required', 'max:255'],
             'prize' => ['required', 'max:255'],
             'image' => ['required'],
+            'picture' => ['required'],
         ]);
 
-        $breakfast = new Breakfast;
-        $breakfast->foodname = $request->foodname;
-        $breakfast->aboutfood = $request->aboutfood;
-        $breakfast->prize = $request->prize;
+        $menu = new Menu;
+        $menu->foodname = $request->foodname;
+        $menu->aboutfood = $request->aboutfood;
+        $menu->category = $request->category;
+        $menu->prize = $request->prize;
 
         if ($request->file('image')) {
             $file = $request->file('image');
             $filename = date('YmdHi') . $file->getClientOriginalName();
             $file->move(public_path('public/images'), $filename);
-            $breakfast['image'] = $filename;
+            $menu['image'] = $filename;
         }
-        $breakfast->save();
-        return redirect('/breakfast-table');
+        $menu->save();
+        return redirect('/menu-table')->with('message', 'You have successfully created a menu');
     }
 
     public function create()
     {
-        return Inertia::render('Adminbreakfast', [
-            'breakfast' => Breakfast::paginate(4)
+        return Inertia::render('Menupage', [
+            'menu' => Menu::paginate(4)
         ]);
     }
 
     public function destroy($id)
     {
 
-        $breakfast = Breakfast::findorfail($id)->delete();
+        $menu = Menu::findorfail($id)->delete();
         return redirect()->back();
     }
 }

@@ -4,7 +4,7 @@
     <nav>
 
         <!-- NAV DIV -->
-        <div class="flex bg-sky-200 pt-3 md:flex md:justify-center md:space-x-12 px-2 lg:px-24 lg:justify-between mx-auto">
+        <div class="flex bg-sky-200 pt-3 ml-[14%] md:ml-[0%] lg:ml-[22%] md:flex md:justify-center md:space-x-12 px-2 lg:px-24 lg:justify-between mx-auto">
 
 
             <!-- LOGO -->

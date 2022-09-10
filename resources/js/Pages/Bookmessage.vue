@@ -12,7 +12,7 @@
         </div>
 
         <div  class="lg:p-8 ml-[30%] mt-12" style="overflow-x:auto;">
-            <table class="border-collapse  border-2 border-gray-300">
+            <table class="border-collapse w-full border-2 border-gray-300">
                 <tr>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">S/N</th>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">Full Name</th>

@@ -2,10 +2,10 @@
 
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BookedController;
 use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\BreakfastController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ Route::get('/book-table', [BookedController::class, 'index']);
 Route::post('/booked', [BookedController::class, 'store']);
 
 /* ADMIN BOOK ROUTE */
-Route::get('/admin-book', [BookedController::class, 'create'])->middleware('auth');
+Route::get('/admin-book', [BookedController::class, 'create']);
 Route::delete('/admin-book/{id}/destroy', [BookedController::class, 'destroy']);
 
 
@@ -40,31 +40,14 @@ Route::post('/admin-control-register', [RegisterController::class, 'store']);
 Route::get('/admin-control-login', [LoginController::class, 'index'])->name('login');
 Route::post('/admin-control-login', [LoginController::class, 'store']);
 
+/* ADMIN MENU SIDE
+
+
 /* ADMIN MAIN HOME */
-Route::get('/admin-dashboard-control', [RegisterController::class, 'create']);
+Route::get('/admin-dashboard-control', [MenuController::class, 'index']);
+Route::post('/menu', [MenuController::class, 'store']);
 
 
-/* ADMIN MENU CREATE LINKS */
-
-
-/* BREAK FAST SIDE */
-Route::get('/breakfast-menu', [BreakfastController::class, 'index']);
-Route::post('/breakfast', [BreakfastController::class, 'store']);
-
-/* BREAKFAST ADMIN DASHBORD */
-Route::get('/breakfast-table', [BreakfastController::class, 'create']);
-Route::delete('/breakfast-table/{id}/destroy', [BreakfastController::class, 'destroy']);
-
-
-
-Route::get('/dinner-menu', function () {
-    return Inertia::render('Dinner');
-});
-
-Route::get('/drinks-menu', function () {
-    return Inertia::render('Drinks');
-});
-
-Route::get('/lunch-menu', function () {
-    return Inertia::render('Lunch');
-});
+/* MENU ADMIN DASHBORD*/
+Route::get('/menu-table', [MenuController::class, 'create']);
+Route::delete('/menu-table/{id}/destroy', [MenuController::class, 'destroy']);

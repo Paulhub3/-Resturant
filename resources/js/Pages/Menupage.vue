@@ -11,28 +11,40 @@
             <Sidebar />
         </div>
 
-        <div  class="lg:p-8 ml-[30%] mt-12" style="overflow-x:auto;">
-            <table class="border-collapse  border-2 border-gray-300">
+
+        <div v-if="!isHidden" class="relative z-0 grid justify-items-center">
+            <div v-if="$page.props.flash.message"  class="alert flex-col mt-6 w-96 md:w-4/12 bg-white shadow-xl drop-shadow-lg px-3 py-12 rounded text-2xl font-sans absolute -z-10  font-semibold text-green-500">
+                <h1 class="text-center">{{ $page.props.flash.message }}</h1>
+
+                <button @click="isHidden = true" class="px-4 py-2 bg-green-500 text-base mt-6 w-16 mx-36 lg:ml-44 rounded font-mono text-white">
+                    OK
+                </button>
+            </div>
+        </div>
+
+
+        <div  class="lg:p-8 ml-[25%] mt-12" style="overflow-x:auto;">
+            <table class="border-collapse w-full border-2 border-gray-300">
                 <tr>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">S/N</th>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">Food Name</th>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">Describe Food</th>
+                <th class="border border-gray-300 text-gray-700 font-sans text-base">Category</th>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">Prize</th>
                 <th class="border border-gray-300 text-gray-700 font-sans text-base">Image</th>
 
                 </tr>
-                <tr v-for="breakfast in breakfast.data" :key="breakfast.id">
-                    <td >{{ breakfast.id }}</td>
-                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ breakfast.foodname }}</td>
-                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ breakfast.aboutfood }}</td>
-                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ breakfast.prize }}</td>
-                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ breakfast.image }}</td>
+                <tr v-for="menu in menu.data" :key="menu.id">
+                    <td >{{ menu.id }}</td>
+                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ menu.foodname }}</td>
+                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ menu.aboutfood }}</td>
+                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ menu.category }}</td>
+                    <td class="border border-gray-300 text-gray-700 font-sans text-sm">{{ menu.prize }}</td>
+                    <td class="border border-gray-300"> <img :src="'/public/' + '/images/' + menu.image" class="w-24" /> </td>
 
-                    <td class="border border-gray-300">
-                        <button class="py-2 px-3 bg-sky-600 rounded-md"><a class="font-medium text-white font-sans text-base" href="https://www.google.com/intl/en-GB/gmail/about/#inbox" target="_blank" rel="noopener noreferrer">Reply</a></button>
-                    </td>
-                    <td class="border border-gray-300">
-                        <button type="button" @click="destroy(breakfast.id)" class="py-2 px-3 font-medium text-white font-sans text-base bg-red-600 rounded-md">
+
+                    <td class="border border-gray-300 ">
+                        <button type="button" @click="destroy(menu.id)" class="py-2 px-3 font-medium text-white font-sans text-base bg-red-600 rounded-md ">
                             Delete
                         </button>
                     </td>
@@ -43,7 +55,7 @@
 
             <div class="p-8">
                 <Link
-                    v-for="link in breakfast.links"
+                    v-for="link in menu.links"
                     :href="link.url"
                     v-html="link.label"
                     class="px-1 text-lg font-medium"
@@ -69,14 +81,21 @@ import { Inertia } from '@inertiajs/inertia';
            Sidebar
         },
 
+        data() {
+            return {
+                isHidden: false,
+            };
+        },
+
+
         props: {
-           breakfast: Object,
+           menu: Object,
         },
 
         setup() {
 
             function destroy(id) {
-                Inertia.delete(`breakfast-table/${id}/destroy`, {
+                Inertia.delete(`menu-table/${id}/destroy`, {
                     onBefore: () => confirm('Are you sure you want to delete this booked table'),
                     onSuccess: () => alert('Booked Table Successfully deleted'),
                 })
